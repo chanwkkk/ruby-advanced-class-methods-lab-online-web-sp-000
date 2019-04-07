@@ -47,6 +47,7 @@ end
 def self.new_from_filename(filename)
   song=self.new
   array=filename.split(/[-\.]/)
+  name_array=array.collect{|b|b.strip}
   song.name=name_array[1]
   song.artist_name=name_array[0]
   song
